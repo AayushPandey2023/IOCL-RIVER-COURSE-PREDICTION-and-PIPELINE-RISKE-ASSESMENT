@@ -1,0 +1,41 @@
+
+KRNPL — LAYER 2 RISK SUMMARY
+Najibabad Incident Zone  |  Ch. ~144.1 km
+==================================================
+
+DATA SOURCE
+  Rainfall  : NASA GPM IMERG V07 (half-hourly, 0.1°)
+  Catchment : MERIT Hydro (90 m), area = 280.00 km²
+  Window    : June-Sept monsoon, 2016-2024 (9 usable years)
+  Method    : Rational Method  Q = C x I x A / 360
+
+ASSUMPTIONS (flag for review with IOCL guide)
+  Runoff coefficient C  : 0.35 (typical cultivated/scrub foothill terrain)
+  Critical discharge    : 150 m³/s — PROXY VALUE,
+                           pending Layer 3 HEC-RAS + scour model output
+
+DISCHARGE TREND
+  Change rate : +0.32 m³/s per year
+  Trend R²    : 0.120
+  Peak year   : 2018  (14.2 m³/s)
+  Latest      : 2024  (11.8 m³/s, 8% of threshold)
+  Years exceeding proxy threshold: 0 / 9
+
+RISK SCORE BREAKDOWN
+  Exceedance frequency     0/35   No exceedance on record
+  Latest yr vs threshold   5/30   Latest year well below threshold
+  Trend confidence         2/20   R²=0.12, trend +0.3 m³/s/yr
+  Known incident site     15/15   Known washout incident site
+  ─────────────────────────────────
+  TOTAL SCORE            22/100  →  LOW
+
+IMMEDIATE NEXT STEPS
+  1. Replace PROXY_CRITICAL_DISCHARGE_M3S with the real scour-based
+     threshold once Layer 3 (HEC-RAS + Lacey's regime formula) is built.
+  2. Cross-check IMERG peak intensities against IMD gridded rainfall
+     and, if available, CWC gauge discharge for the same events.
+  3. Refine runoff coefficient C using actual soil/land-cover data
+     for the catchment (currently an assumed value).
+  4. Wire this script's exceedance flag into an alert (email/SMS)
+     once thresholds are finalised.
+  5. Proceed to Layer 3 — Hydraulic Scour Modelling.

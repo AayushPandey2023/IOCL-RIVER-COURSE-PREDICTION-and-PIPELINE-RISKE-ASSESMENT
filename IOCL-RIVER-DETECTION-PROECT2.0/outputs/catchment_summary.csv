@@ -1,0 +1,10 @@
+metric,value,unit
+catchment_area,280,km2
+channel_width_at_crossing,100.0,m
+channel_elevation_at_crossing,265,m
+equivalent_catchment_radius,9.44,km
+pour_point_lon,78.1106635,deg
+pour_point_lat,29.6484015,deg
+data_source,fallback_estimate,
+upa_filter_min,50,km2
+upa_filter_max,600,km2
